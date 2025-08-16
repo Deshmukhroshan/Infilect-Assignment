@@ -1,0 +1,21 @@
+version: "3"
+services:
+  backend:
+    build:
+      context: ./metrics-backend
+      dockerfile: Dockerfile.backend
+    container_name: backend
+    ports:
+      - "8000:8000"
+    
+
+  frontend:
+    build:
+      context: ./metrics-frontend
+      dockerfile: Dockerfile.frontend
+    container_name: frontend
+    ports:
+      - "3000:80"   # React build served by Nginx
+    depends_on:
+      - backend
+    
