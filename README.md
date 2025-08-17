@@ -97,7 +97,7 @@ Containerization
 Docker
 •	Separate Dockerfiles for backend & frontend
 •	Multi-stage builds & .dockerignore implemented
-•	Target image size < 200MB
+
 Docker Compose
 •	docker-compose.yml orchestrates backend + frontend for local testing
 docker-compose up --build
@@ -105,11 +105,10 @@ ________________________________________
 Kubernetes Deployment (Local)
 •	Use any local Kubernetes distribution (k3s, minikube, kind)
 •	Includes:
-o	Deployment & Service manifests
-o	ConfigMaps if required
-o	Liveness & Readiness probes
-o	CPU/memory requests & limits
-o	Namespaces & labels for organization
+•	Deployment & Service manifests
+•	Liveness & Readiness probes
+•	CPU/memory requests & limits
+•	Namespaces & labels for organization
 •	Services exposed via NodePort for local access
 kubectl apply -f k8s/
 ________________________________________
