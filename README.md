@@ -110,7 +110,7 @@ Kubernetes Deployment (Local)
 •	CPU/memory requests & limits
 •	Namespaces & labels for organization
 •	Services exposed via NodePort for local access
-kubectl apply -f k8s/
+kubectl apply -f .
 ________________________________________
 CI/CD Pipeline
 Configured using GitHub Actions:
@@ -131,7 +131,7 @@ Backend: http://localhost:8000/metrics
 
 Kubernetes (Local Cluster)
 kubectl apply -f .
-kubectl get svc -n metrics
+kubectl get svc -n <namespace>
 kubectl get pods -n <namespace>
 kubectl logs <pod-name> -n <namespace>
 kubectl logs -f <pod-name> -n <namespace> # stream logs
