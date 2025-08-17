@@ -34,7 +34,7 @@ This project demonstrates a complete metrics monitoring system:
 
 | Component        | Technology Options                   |
 |-----------------|-------------------------------------|
-| Backend          | Go, Python, Node.js                  |
+| Backend          | Python, Node.js                  |
 | Frontend         | React, Angular, Vue                  |
 | Containerization | Docker, Docker Compose               |
 | Orchestration    | Kubernetes (k3s / minikube / kind) |
@@ -67,8 +67,8 @@ This project demonstrates a complete metrics monitoring system:
 
 ```bash
 # Clone repository
-git clone https://github.com/<username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/Deshmukhroshan/Infilect-Assignment.git
+cd Infilect-Assignment
 
 # Start services locally with Docker Compose
 docker-compose up –build
@@ -90,8 +90,7 @@ ________________________________________
 Frontend Dashboard
 •	Polls /metrics every 10 seconds
 •	Displays metrics as:
-o	Graphs (Chart.js / Recharts)
-o	Metric cards
+•	Metric cards
 •	Responsive UI for multiple screen sizes
 ________________________________________
 Containerization
@@ -124,5 +123,5 @@ Configured using GitHub Actions:
 4.	Push images to Docker Hub or GHCR
 5.	Apply Kubernetes manifests to local cluster
 •	Sensitive values stored in GitHub Secrets
-Sample Workflow File: .github/workflows/ci-cd.yml
+Sample Workflow File: .github/workflows/deploy.yml
 
