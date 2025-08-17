@@ -123,17 +123,16 @@ Configured using GitHub Actions:
 5.	Apply Kubernetes manifests to local cluster
 •	Sensitive values stored in GitHub Secrets
 Sample Workflow File: .github/workflows/deploy.yml
-
+________________________________________
 ## Accessing Services & Troubleshooting
 
 Frontend: http://localhost:3000
-
 Backend: http://localhost:8000/metrics
 
 Kubernetes (Local Cluster)
-
 kubectl apply -f .
 kubectl get svc -n metrics
 kubectl get pods -n <namespace>
 kubectl logs <pod-name> -n <namespace>
 kubectl logs -f <pod-name> -n <namespace> # stream logs
+________________________________________
