@@ -44,7 +44,7 @@ This project demonstrates a complete metrics monitoring system:
 
 ## Architecture
 
-![System Architecture]
+![Alt text](diagram.png)
  
 - Backend exposes `/metrics` endpoint.
 - Frontend polls the backend every 05s and displays metrics on cards and graphs.
