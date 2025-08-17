@@ -28,14 +28,14 @@ jobs:
       - name: Build and push backend image
         run: |
           docker build -t my-backend:latest ./backend
-          docker tag my-backend:latest $DOCKER_USERNAME/my-backend:latest
-          docker push $DOCKER_USERNAME/my-backend:latest
+          docker tag backend:latest $DOCKER_USERNAME/backend:latest
+          docker push $DOCKER_USERNAME/backend:latest
 
       - name: Build and push frontend image
         run: |
           docker build -t my-frontend:latest ./frontend
-          docker tag my-frontend:latest $DOCKER_USERNAME/my-frontend:latest
-          docker push $DOCKER_USERNAME/my-frontend:latest
+          docker tag frontend:latest $DOCKER_USERNAME/frontend:latest
+          docker push $DOCKER_USERNAME/frontend:latest
 
       - name: Configure kubeconfig
         run: |
